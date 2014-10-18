@@ -18,7 +18,7 @@ class MergeSort
       if left.first <= right.first
         result << left.shift
       else
-       result << right.shift
+        result << right.shift
       end
     end
     result + left + right
