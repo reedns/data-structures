@@ -2,7 +2,7 @@ require 'spec_helper'
 require 'merge_sort.rb'
 
 describe 'MergeSort' do
- describe '#merge_sort' do
+  describe '#merge_sort' do
     let(:sorter) { MergeSort.new }
 
     it 'returns an array of two elements in ascending order' do
