@@ -17,6 +17,6 @@ class QuickSort
       end
     end
 
-    sort(lesser) + pivot_arr + sort(greater)
+    sort(lesser) + pivot_arr  + sort(greater)
   end
 end
