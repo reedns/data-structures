@@ -1,6 +1,10 @@
 class QuickSort
   def sort(arr)
-    pivot = arr[0]; lesser = []; greater = []; pivot_arr = []
+    pivot = arr[0]
+    lesser = []
+    greater = []
+    pivot_arr = []
+
     return arr if arr.size <= 1
 
     arr.each do |element|
