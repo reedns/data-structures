@@ -1,4 +1,4 @@
-Node = Struct.new(:val, :nxt)
+require 'data_structures/node.rb'
 
 class LinkedList
   attr_accessor :head
@@ -35,12 +35,11 @@ class LinkedList
   end
 
   def remove(val)
-    #will remove node from the list
     current_node = @head
     until current_node.nxt == nil || current_node.nxt.val == val
       current_node = current_node.nxt
     end
-    return nil if current_node .nxt == nil
+    return nil if current_node.nxt == nil
     node_to_delete = current_node.nxt
     current_node.nxt = node_to_delete.nxt
   end
