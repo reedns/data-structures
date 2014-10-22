@@ -52,4 +52,3 @@ describe 'DataQueue' do
     end
   end
 end
-

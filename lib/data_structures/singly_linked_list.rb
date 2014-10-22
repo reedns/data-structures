@@ -3,7 +3,7 @@ require 'data_structures/node.rb'
 class LinkedList
   attr_accessor :head
 
-  def initialize(start_value=nil)
+  def initialize(start_value = nil)
     @head = Node.new(start_value)
   end
 
@@ -28,7 +28,7 @@ class LinkedList
     return @head if @head.val == val
     current_node = @head
 
-    until current_node == nil || current_node.val == val
+    until current_node.nil? || current_node.val == val
       current_node = current_node.nxt
     end
     current_node
@@ -36,10 +36,10 @@ class LinkedList
 
   def remove(val)
     current_node = @head
-    until current_node.nxt == nil || current_node.nxt.val == val
+    until current_node.nxt.nil? || current_node.nxt.val == val
       current_node = current_node.nxt
     end
-    return nil if current_node.nxt == nil
+    return nil if current_node.nxt.nil?
     node_to_delete = current_node.nxt
     current_node.nxt = node_to_delete.nxt
   end
@@ -48,10 +48,10 @@ class LinkedList
     current_node = @head
     nodes = []
 
-    until current_node == nil
+    until current_node.nil?
       nodes << current_node.val
       current_node = current_node.nxt
     end
-    p nodes.join(', ')
+    nodes.join(', ')
   end
 end

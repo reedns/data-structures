@@ -10,11 +10,11 @@ class DataQueue < LinkedList
   end
 
   def enqueue(value)
-    if @head == nil
+    if @head.nil?
       @head = Node.new(value)
     else
       current_node = @head
-      until current_node.nxt == nil
+      until current_node.nxt.nil?
         current_node = current_node.nxt
       end
       current_node.nxt = Node.new(value)
@@ -23,7 +23,7 @@ class DataQueue < LinkedList
   end
 
   def dequeue
-    fail 'Queue is empty' if @head == nil
+    fail 'Queue is empty' if @head.nil?
     @size -= 1
     old_head = @head
     new_head = old_head.nxt
@@ -32,7 +32,5 @@ class DataQueue < LinkedList
     old_head
   end
 
-  def size
-    @size
-  end
+  attr_reader :size
 end
