@@ -14,9 +14,7 @@ class DataQueue < LinkedList
       @head = Node.new(value)
     else
       current_node = @head
-      until current_node.nxt.nil?
-        current_node = current_node.nxt
-      end
+      current_node = current_node.nxt until current_node.nxt.nil?
       current_node.nxt = Node.new(value)
     end
     @size += 1

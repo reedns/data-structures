@@ -8,9 +8,7 @@ class Stack < LinkedList
 
   def pop
     current_node = @head
-    until current_node.nxt.nxt.nil?
-      current_node = current_node.nxt
-    end
+    current_node = current_node.nxt until current_node.nxt.nxt.nil?
     popped_node = current_node.nxt
     current_node.nxt = nil
     popped_node
