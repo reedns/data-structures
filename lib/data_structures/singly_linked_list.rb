@@ -53,6 +53,6 @@ class LinkedList
       nodes << current_node.val
       current_node = current_node.nxt
     end
-    p nodes.join(', ')
+    nodes.join(', ')
   end
 end
