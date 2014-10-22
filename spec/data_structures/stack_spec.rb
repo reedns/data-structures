@@ -40,7 +40,7 @@ describe 'Stack' do
     it 'raises an error if the stack is empty' do
       3.times { stack.pop }
 
-      proc{ stack.pop }.must_raise RuntimeError
+      proc { stack.pop }.must_raise RuntimeError
     end
   end
 end

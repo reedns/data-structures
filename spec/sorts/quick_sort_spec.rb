@@ -17,7 +17,8 @@ describe 'QuickSort' do
 
     it 'sorts an array of any number of elements in ascending order' do
       arr = (1..100).to_a.shuffle
-      sorter.sort(arr).must_equal (1..100).to_a
+      sorted_arr = (1..100).to_a
+      sorter.sort(arr).must_equal sorted_arr
     end
 
     it 'is benchmarked' do

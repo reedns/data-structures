@@ -7,20 +7,16 @@ class Stack < LinkedList
   end
 
   def pop
-    fail 'Stack is empty' if @head == nil
-
+    fail 'Stack is empty' if @head.nil?
     if @head.nxt
       current_node = @head
-      until current_node.nxt.nxt == nil
-        current_node = current_node.nxt
-      end
+      current_node = current_node.nxt while current_node.nxt.nxt
       popped_node = current_node.nxt
       current_node.nxt = nil
     else
       popped_node = @head
       @head = nil
     end
-
     popped_node
   end
 end
