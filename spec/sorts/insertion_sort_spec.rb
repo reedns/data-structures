@@ -15,7 +15,8 @@ describe 'Array' do
 
     it 'returns an array of any number of elements in ascending order' do
       arr = (1..100).to_a.shuffle
-      arr.insertion_sort.must_equal (1..100).to_a
+      sorted_arr = (1..100).to_a
+      arr.insertion_sort.must_equal sorted_arr
     end
 
     it 'is benchmarked' do

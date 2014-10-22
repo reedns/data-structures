@@ -15,8 +15,9 @@ describe 'RadixSort' do
     end
 
     it 'returns a sorted array of n numbers in ascending order' do
-      arr = (1..1_000).to_a.shuffle
-      radix.sort(arr).must_equal (1..1_000).to_a
+      arr = (1..100).to_a.shuffle
+      sorted_arr = (1..100).to_a
+      radix.sort(arr).must_equal sorted_arr
     end
 
     it 'is benchmarked' do
