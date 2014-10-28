@@ -41,7 +41,6 @@ class LinkedList
     end
 
     return nil if current_node.nxt.nil?
-
     node_to_delete = current_node.nxt
     current_node.nxt = node_to_delete.nxt
   end

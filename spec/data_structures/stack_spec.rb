@@ -37,6 +37,7 @@ describe 'Stack' do
       stack.pop.val.must_equal 'A'
     end
 
+
     it 'raises an error if the stack is empty' do
       3.times { stack.pop }
 
