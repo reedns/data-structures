@@ -47,10 +47,9 @@ describe 'DoublyLinkedList' do
 
   describe '#remove_duplicates' do
     it 'deletes all the duplicates from the list' do
-      dupe_list = DoublyLinkedList.new()
+      dupe_list = DoublyLinkedList.new
       nodes = []
       200.times { nodes << Node.new(rand(1..100), nil, nil) }
-      #require 'pry'; binding.pry
       nodes.each { |n|  dupe_list.insert(n) }
 
       dupe_list.remove_duplicates.to_s

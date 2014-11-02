@@ -16,7 +16,7 @@ class DoublyLinkedList < LinkedList
     old_head = @head
     @head = Node.new(value, old_head, nil)
     old_head.prev = @head
-    old_head = @tail if old_head.nxt.nil?
+    @tail = old_head if old_head.nxt.nil?
     @size += 1
   end
 
