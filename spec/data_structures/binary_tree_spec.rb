@@ -24,7 +24,7 @@ describe 'BinaryTree' do
   end
 
   it 'does a pre-order traversal' do
-    @tim.pre_order(@tim).must_equal %w(Tim Jony Dan K  atie Peter Andrea
+    @tim.pre_order(@tim).must_equal %w(Tim Jony Dan Katie Peter Andrea
                                        Phil Craig Eddie)
   end
 
